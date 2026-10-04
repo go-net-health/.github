@@ -33,11 +33,16 @@ loop) acts on.
 
 > **It probes and reports; the caller decides.**
 
+And the other half: **`endpoint`** is the side being probed — `/healthz`,
+`/readyz` and `/metrics` in Prometheus text format, standard library only. One
+org, both ends of the same check.
+
 ## Repositories
 
 | Repo | What it is |
 |------|------------|
 | [**health**](https://github.com/go-net-health/health) | the probe runner: `Probe` (HTTP/TCP), `Runner`, `Status`, `Result`, `IsTimeout` |
+| [**endpoint**](https://github.com/go-net-health/endpoint) | the served side: `/healthz`, `/readyz` and `/metrics` in Prometheus text format, standard library only |
 | [**docs**](https://github.com/go-net-health/docs) | MkDocs Material documentation, versioned with [mike], served at [/docs/](https://go-net-health.github.io/docs/) |
 | [**go-net-health.github.io**](https://github.com/go-net-health/go-net-health.github.io) | the Hugo landing page |
 | [**brand**](https://github.com/go-net-health/brand) | logos and brand assets |
